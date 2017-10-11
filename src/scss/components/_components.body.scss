@@ -1,0 +1,125 @@
+.#{$prefix}body {
+
+    &__firstsection{
+        margin:5rem 0;
+
+        @include mq(md) {
+            margin:2rem 0;
+        }
+    }
+
+    &__title{
+        font-family: $psbold;
+        text-transform: uppercase;
+        color: $title;
+        line-height:0.95rem;
+        letter-spacing: 0.15rem;
+    }
+
+    &__text{
+        font-family: $plight;
+        color: $text;
+        line-height: 2.2rem;
+        letter-spacing: 0.05rem;
+        margin: 2rem 21%;
+
+        @include mq(md) {
+            margin: 2rem 9%;
+        }
+    }
+
+    &__secondsection{
+        position: relative;
+        margin-top: 12.5rem;
+
+        @include mq(lg) {
+            margin-top: 6rem;
+
+            @include mq(md) {
+                margin-top: 3rem;
+
+                @include mq(s) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__left-block{
+
+        @include mq(lg) {
+            position: relative;
+            transform: translate(37%, 20%);
+
+        }
+
+        &__img-block{
+            position: absolute;
+            transform: translate(-35%, 7%);
+        }
+
+        &__blue-block{
+            position: relative;
+            height: 675px;
+            width: 750px;
+            transform: translate(-43%, -22%);
+            background: $blue-block;
+        }
+
+        &__text-block{
+            position: relative;
+            width: 345px;
+            transform: translate(51%, -128%);
+            font-family: $psbold;
+            line-height: 3.5rem;
+
+            &>p{
+
+                @include mq(md) {
+                    font-size: 2.3rem;
+                }
+            }
+        }
+    }
+
+    &__right-block{
+        position: absolute;
+        top: 0;
+        margin:1.8rem 0;
+
+        @include mq(lg) {
+            transform: translate(-61%, 16%);
+        }
+
+        &__text-block{
+            position: relative;
+            width:  50rem;
+            height: 30rem;
+            text-transform: uppercase;
+            line-height: 4.5rem;
+            font-family: $psbold;
+            transform: translate(68%, 0%);
+            background-image: $body;
+            background-position: (32% 65%);
+            background-size:  auto 47%;
+            background-repeat: no-repeat;
+
+            & p {
+
+                &>span:last-child {
+                    color: $bodys-text;
+
+                }
+
+                @include mq(lg){
+                    transform: translateY(34%);
+
+                    @include mq(md) {
+                        transform: translate(-11%, 125%);
+                    }
+                }
+            }
+        }
+    }
+}
+

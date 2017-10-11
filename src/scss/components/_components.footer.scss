@@ -1,0 +1,134 @@
+.#{$prefix}footer {
+    background: $footer-back;
+    width: 100%;
+    border-top: 1px solid $footer-border;
+    padding-top:3.25rem;
+    padding-bottom: 5.75rem;
+
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+
+        @include mq(md) {
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+            text-align: center;
+        }
+
+    }
+
+    &__left-block{
+        width: 55%;
+        padding-left: 1.5rem;
+
+        &-top{
+            overflow: hidden;
+            padding-bottom: 2.5rem;
+
+            @include mq(md) {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 1rem;
+
+            }
+
+            & p{
+                color: $black;
+                font-family: $pregular;
+                letter-spacing: 0.1rem;
+                float: right;
+                padding-top: 11px;
+                //line-height:0.95rem;
+
+                &>span{
+                    color: #1bf1ad
+                }
+
+                @include mq(xlg) {
+                    float: left;
+
+                    @include mq(md) {
+                        order: 2;
+                    }
+                }
+            }
+
+            .#{$prefix}logo {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                text-transform: uppercase;
+                line-height:0.95rem;
+                border:1px solid $black;
+                padding: .6rem 1rem .6rem 1rem;
+                width: 8.5rem;
+                float: left;
+                cursor: pointer;
+
+                &__figure{
+                    padding: 0 2px;
+                }
+
+                @include mq(md) {
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        @include mq(md) {
+            width: 100%;
+        }
+    }
+    &__logo{
+        font-family: $psbold;
+        padding: 4px;
+        line-height:0.95rem;
+        letter-spacing: 0.15rem;
+        color: $black;
+    }
+
+    &__menu-block {
+        text-transform: uppercase;
+        font-family: $pmedium;
+        color: $black;
+        //line-height:0.95rem;
+        letter-spacing: 0.05rem;
+        display: flex;
+        justify-content: space-between;
+
+        @include mq(md) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__right-block{
+
+        @include mq(md) {
+            padding-top: 1rem;
+        }
+    }
+
+    &__social{
+        padding-bottom:1.7rem;
+    }
+
+    &__social>a {
+        padding: 4px;
+    }
+
+    &__contact>p>img {
+        padding: 0 7px;
+    }
+
+    &__contact {
+        font-family: $pmedium;
+        color: $black;
+        line-height: 1.7rem;
+        text-transform: uppercase;
+        //letter-spacing: 0.05rem;
+    }
+}

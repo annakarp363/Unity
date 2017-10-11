@@ -1,0 +1,33 @@
+@mixin clearfix{
+  :after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+@mixin mq($point) {
+
+  @if $point == xs {
+    @media (max-width: 576px) { @content; }
+  }
+
+  @if $point == s {
+    @media (max-width: 767px) { @content; }
+    //577
+  }
+
+  @if $point == md {
+    @media (max-width: 991px) { @content; }
+    //768
+  }
+
+  @if $point == lg {
+    @media (max-width: 1024px) { @content; }
+    //992
+  }
+
+  @if $point == xlg {
+    @media (max-width: 1279px) { @content; }
+    //1024
+  }
+}

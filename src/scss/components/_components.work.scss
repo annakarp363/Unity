@@ -1,0 +1,23 @@
+.#{$prefix}work {
+    padding-top: 11.9rem;
+
+    @include mq(s) {
+        padding-top: 5rem;
+    }
+
+    &__title {
+        font-family: $psbold;
+        text-transform: uppercase;
+        color: $title;
+        line-height: 0.95rem;
+        letter-spacing: 0.15rem;
+    }
+
+    &__text {
+        font-family: $psbold;
+        text-transform: uppercase;
+        line-height: 4.5rem;
+        padding-top: 0.5rem;
+
+    }
+}

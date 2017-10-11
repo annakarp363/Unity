@@ -1,0 +1,32 @@
+.#{$prefix}-work__slider {
+}
+
+.slick-arrow{
+    border: none;
+    width: 96px;
+    height: 96px;
+    //overflow: hidden;
+    color: transparent;
+    z-index: 999;
+    position: absolute;
+    top: 41%;
+}
+
+.slick-prev{
+    background: url("../img/prev.png");
+    left: 0;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.slick-next{
+    background: url("../img/next.png");
+    right: 0;
+    cursor: pointer;
+}
+
+.slick-slide{
+    width: 440px !important;
+    height: 400px !important;
+    margin: 45px !important;
+}

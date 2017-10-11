@@ -1,0 +1,93 @@
+.#{$prefix}team {
+
+    &__title{
+        font-family: $psbold;
+        text-transform: uppercase;
+        color: $title;
+        line-height:0.95rem;
+        letter-spacing: 0.15rem;
+    }
+
+    &__text{
+        font-family: $psbold;
+        text-transform: uppercase;
+        line-height: 4.5rem;
+        padding-top: 0.5rem;
+    }
+
+    &__cofounder-blocks{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 3.6rem;
+        z-index:555;
+
+        @include mq(s) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &-wrapper{
+            padding: 1.2rem 2.1rem;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+
+            @include mq(xlg) {
+                width: 160px;
+            }
+
+            @include mq(lg) {
+                padding: .5rem .7rem;
+            }
+
+            @include mq(s) {
+                width: auto;
+                margin: 1rem;
+            }
+
+            &:hover {
+                background: $blue-block;
+                transition:0.3s;
+            }
+        }
+    }
+
+    &__img-block{
+        float: left;
+    }
+
+    &__text-block{
+        float: left;
+        padding: 2rem 0 0 0.5rem;
+
+        @include mq(xlg) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: .5rem 0 0 1.25rem;
+        }
+
+        @include mq(s) {
+            padding: 1.5rem 0 0 1.25rem
+        }
+
+        p{
+            font-family: $pregular;
+            color: $title;
+            line-height: 1.3rem;
+            //letter-spacing: 0.15rem;
+        }
+
+        span{
+            font-family: $pregular;
+            color: $text;
+            line-height: 2.2rem;
+            //letter-spacing: 0.15rem;
+        }
+
+        &__social a{
+            padding: 0.5rem 5px;
+        }
+    }
+}
